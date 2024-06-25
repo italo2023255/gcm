@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarda Civil Municipal de Pará de Minas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #1E2C4E; /* Azul marinho */
+            color: #FFFFFF; /* Branco */
+        }
+        h1, h2 {
+            background-color: #0B162B; /* Azul mais escuro */
+            color: #FFFFFF; /* Branco */
+            padding: 10px;
+            border-bottom: 2px solid #FFFFFF; /* Branco */
+            text-align: center;
+        }
+        .section {
+            background-color: #233D6C; /* Azul médio */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .info {
+            margin-left: 20px;
+        }
+        .envolvido {
+            margin-top: 10px;
+        }
+        .envolvido-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="time"], input[type="radio"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #CCCCCC; /* Cinza */
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-add {
+            background-color: #0B162B; /* Azul mais escuro */
+            color: #FFFFFF; /* Branco */
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .btn-add:hover {
+            background-color: #233D6C; /* Azul médio */
+        }
+        input[type="submit"] {
+            background-color: #0B162B; /* Azul mais escuro */
+            color: #FFFFFF; /* Branco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #233D6C; /* Azul médio */
+        }
+    </style>
+</head>
+<body>
+    <h1>PREFEITURA MUNICIPAL DE PARÁ DE MINAS</h1>
+    <h2>ASSESSORIA MUNICIPAL DE DEFESA SOCIAL E GUARDA CIVIL MUNICIPAL</h2>
+    <form action="#" method="post">
+        <div class="section">
+            <div class="info">
+                <label>Boletim de Ocorrência Simplificado nº:</label>
+                <input type="text" name="boletim_numero">
+                <label>Destinatário:</label>
+                <input type="text" name="destinatario" value="Ao Senhor Comandante da Guarda Civil Municipal" readonly>
+                <label>Descrição Sintética:</label>
+                <select name="descricao_sintetica">
+                    <option value="Y15.030">Patrulhamento Preventivo (Y15.030): Ação/Operação em área urbana.</option>
+                    <option value="T00.000">Fiscalização de Trânsito GCM (T00.000): Infrações referentes ao trânsito.</option>
+                    <option value="Y15.001">Patrulhamento Escolar (Y15.001): Patrulha Escolar.</option>
+                    <option value="X02.000">Fiscalização GCM (X02.000): Coordenação, Controle Operacional e Administrativo.</option>
+                    <option value="A05.000">Abordagem a Suspeito (A05.000): Abordagem a pessoa ou veículo em atitude suspeita.</option>
+                    <option value="A05.001">Averiguação de Pessoas/Veículos (A05.001): Abordagem de suspeitos de tráfico de drogas e crimes violentos.</option>
+                    <option value="Y30.007">Apoio a Órgãos Municipais (Y30.007): Apoio a órgãos municipais.</option>
+                    <option value="X03.000">Apoio a Transeunte: Empenho administrativo (X03.000).</option>
+                    <option value="A10.000">Localização de Pessoa Desaparecida (A10.000): Pessoa localizada.</option>
+                    <option value="A17.001">Localização de Cadáver (A17.001): Localização de corpo. Acionar CBMMG e PC.</option>
+                    <option value="A17.003">Localização de Partes de Corpo (A17.003): Encontro de partes de corpo. Acionar CBMMG.</option>
+                    <option value="A17.005">Remoção de Cadáver (A17.005): Remoção feita pelo Rabecão da Polícia Civil.</option>
+                    <option value="A30.100">Encaminhamento de Animais ao Órgão Competente (A30.100): Recolhimento de animais abandonados.</option>
+                    <option value="A31.201">Recolhimento de Animal Doméstico (A31.201): Recolhimento de animal doméstico ferido ou causando risco.</option>
+                    <option value="A31.202">Recolhimento de Animais Exóticos (A31.202): Recolhimento de animais exóticos abandonados ou afastados do seu bioma. Acionar CBMMG.</option>
+                </select>
+            </div>
+        </div>
+
+        <h2>I – DADOS REFERENTES AO LOCAL DE OCORRÊNCIA</h2>
+        <div class="section">
+            <div class="info">
+                <label>Data:</label>
+                <input type="date" name="data">
+                <label>Hora Inicial:</label>
+                <input type="time" name="hora_inicial">
+                <label>Hora Final:</label>
+                <input type="time" name="hora_final">
+                <label>Logradouro:</label>
+                <input type="text" name="logradouro">
+                <label>Nº:</label>
+                <input type="text" name="numero">
+                <label>Complemento:</label>
+                <input type="text" name="complemento">
+                <label>Bairros:</label>
+                <select name="bairros">
+                    <option value="Centro">Centro</option>
+                    <option value="São José">São José</option>
+                    <option value="Santo Antônio">Santo Antônio</option>
+                    <!-- Adicione outros bairros conforme necessário -->
+                </select>
+                <label>Município:</label>
+                <input type="text" name="municipio" value="Pará de Minas" readonly>
+                <label>UF:</label>
+                <input type="text" name="uf" value="MG" readonly>
+            </div>
+        </div>
+
+        <h2>II – QUALIFICAÇÃO DE ENVOLVIDOS</h2>
+        <div id="envolvidos-container">
+            <div class="section envolvido" id="envolvido-1">
+                <div class="envolvido-info">
+                    <div class="envolvido-title">ENVOL. 01</div>
+                    <div class="info">
+                        <label>Condições de Qualificação:</label>
+                        <input type="text" name="condicoes_qualificacao">
+                        <label>Condições Físicas:</label>
+                        <input type="text" name="condicoes_fisicas">
+                        <label>Nome:</label>
+                        <input type="text" name="nome">
+                        <label>Apelido:</label>
+                        <input type="text" name="apelido">
+                        <label>Data Nasci:</label>
+                        <input type="date" name="data_nascimento">
+                        <label>Sexo:</label>
+                        <input type="radio" name="sexo" value="M"> Masculino
+                        <input type="radio" name="sexo" value="F"> Feminino
+                        <label>Nome da Mãe:</label>
+                        <input type="text" name="nome_mae">
+                        <label>Nome do Pai:</label>
+                        <input type="text" name="nome_pai">
+                        <label>Nacionalidade:</label>
+                        <input type="text" name="nacionalidade">
+                        <label>Naturalidade:</label>
+                        <input type="text" name="naturalidade">
+                        <label>Telefone:</label>
+                        <input type="text" name="telefone">
+                        <label>Documento Tipo:</label>
+                        <input type="text" name="documento_tipo">
+                        <label>Número:</label>
+                        <input type="text" name="documento_numero">
+                        <label>Órgão Emissor:</label>
+                        <input type="text" name="orgao_emissor">
+                        <
+<input type="text" name="orgao_emissor">
+                        <label>Endereço:</label>
+                        <input type="text" name="endereco">
+                        <label>Bairro:</label>
+                        <input type="text" name="bairro">
+                        <label>Cidade:</label>
+                        <input type="text" name="cidade">
+                        <label>UF:</label>
+                        <input type="text" name="uf_envolvido">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn-add" onclick="addEnvolvido()">Adicionar Envolvido</button>
+
+        <h2>III – DESCRIÇÃO DOS FATOS</h2>
+        <div class="section">
+            <div class="info">
+                <label>Descrição Detalhada:</label>
+                <textarea name="descricao_detalhada" rows="6"></textarea>
+            </div>
+        </div>
+
+        <h2>IV – PROVIDÊNCIAS TOMADAS</h2>
+        <div class="section">
+            <div class="info">
+                <label>Providências:</label>
+                <textarea name="providencias" rows="6"></textarea>
+            </div>
+        </div>
+
+        <h2>V – ASSINATURA DO RESPONSÁVEL</h2>
+        <div class="section">
+            <div class="info">
+                <label>Nome do Responsável:</label>
+                <input type="text" name="nome_responsavel">
+                <label>Matrícula:</label>
+                <input type="text" name="matricula_responsavel">
+                <label>Posto:</label>
+                <input type="text" name="posto_responsavel">
+            </div>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        let envolvidoCount = 1;
+
+        function addEnvolvido() {
+            envolvidoCount++;
+            const envolvidoContainer = document.getElementById('envolvidos-container');
+            const envolvidoDiv = document.createElement('div');
+            envolvidoDiv.classList.add('section', 'envolvido');
+            envolvidoDiv.id = 'envolvido-' + envolvidoCount;
+            envolvidoDiv.innerHTML = `
+                <div class="envolvido-info">
+                    <div class="envolvido-title">ENVOL. ${envolvidoCount}</div>
+                    <div class="info">
+                        <label>Condições de Qualificação:</label>
+                        <input type="text" name="condicoes_qualificacao_${envolvidoCount}">
+                        <label>Condições Físicas:</label>
+                        <input type="text" name="condicoes_fisicas_${envolvidoCount}">
+                        <label>Nome:</label>
+                        <input type="text" name="nome_${envolvidoCount}">
+                        <label>Apelido:</label>
+                        <input type="text" name="apelido_${envolvidoCount}">
+                        <label>Data Nasci:</label>
+                        <input type="date" name="data_nascimento_${envolvidoCount}">
+                        <label>Sexo:</label>
+                        <input type="radio" name="sexo_${envolvidoCount}" value="M"> Masculino
+                        <input type="radio" name="sexo_${envolvidoCount}" value="F"> Feminino
+                        <label>Nome da Mãe:</label>
+                        <input type="text" name="nome_mae_${envolvidoCount}">
+                        <label>Nome do Pai:</label>
+                        <input type="text" name="nome_pai_${envolvidoCount}">
+                        <label>Nacionalidade:</label>
+                        <input type="text" name="nacionalidade_${envolvidoCount}">
+                        <label>Naturalidade:</label>
+                        <input type="text" name="naturalidade_${envolvidoCount}">
+                        <label>Telefone:</label>
+                        <input type="text" name="telefone_${envolvidoCount}">
+                        <label>Documento Tipo:</label>
+                        <input type="text" name="documento_tipo_${envolvidoCount}">
+                        <label>Número:</label>
+                        <input type="text" name="documento_numero_${envolvidoCount}">
+                        <label>Órgão Emissor:</label>
+                        <input type="text" name="orgao_emissor_${envolvidoCount}">
+                        <label>Endereço:</label>
+                        <input type="text" name="endereco_${envolvidoCount}">
+                        <label>Bairro:</label>
+                        <input type="text" name="bairro_${envolvidoCount}">
+                        <label>Cidade:</label>
+                        <input type="text" name="cidade_${envolvidoCount}">
+                        <label>UF:</label>
+                        <input type="text" name="uf_envolvido_${envolvidoCount}">
+                    </div>
+                </div>
+            `;
+            envolvidoContainer.appendChild(envolvidoDiv);
+        }
+    </script>
+</body>
+</html>
