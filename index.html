@@ -44,7 +44,7 @@
             margin-top: 10px;
             font-weight: bold;
         }
-        input[type="text"], input[type="date"], input[type="time"], input[type="radio"], textarea, select {
+        input[type="text"], input[type="date"], input[type="time"], textarea, select {
             width: 100%;
             padding: 8px;
             margin-top: 5px;
@@ -127,10 +127,46 @@
                 <input type="text" name="complemento">
                 <label>Bairros:</label>
                 <select name="bairros">
+                    <option value="Belvedere">Belvedere</option>
+                    <option value="Bela Vista">Bela Vista</option>
                     <option value="Centro">Centro</option>
+                    <option value="Dom Bosco">Dom Bosco</option>
+                    <option value="Eldorado">Eldorado</option>
+                    <option value="Esplanada">Esplanada</option>
+                    <option value="Grão Pará">Grão Pará</option>
+                    <option value="JK">JK</option>
+                    <option value="Jardim América">Jardim América</option>
+                    <option value="Jardim Beatriz">Jardim Beatriz</option>
+                    <option value="Jardim Castelo Branco">Jardim Castelo Branco</option>
+                    <option value="Jardim das Oliveiras">Jardim das Oliveiras</option>
+                    <option value="Jardim das Piteiras">Jardim das Piteiras</option>
+                    <option value="Jardim Panorâmico">Jardim Panorâmico</option>
+                    <option value="Jardim Serra Negra">Jardim Serra Negra</option>
+                    <option value="Lagoa dos Mandarins">Lagoa dos Mandarins</option>
+                    <option value="Padre Libério">Padre Libério</option>
+                    <option value="Papa João Paulo II">Papa João Paulo II</option>
+                    <option value="Providência">Providência</option>
+                    <option value="Recanto da Lagoa">Recanto da Lagoa</option>
+                    <option value="Redentor">Redentor</option>
+                    <option value="Santos Dumont">Santos Dumont</option>
+                    <option value="São Cristóvão">São Cristóvão</option>
+                    <option value="São Francisco">São Francisco</option>
+                    <option value="São Geraldo">São Geraldo</option>
                     <option value="São José">São José</option>
-                    <option value="Santo Antônio">Santo Antônio</option>
-                    <!-- Adicione outros bairros conforme necessário -->
+                    <option value="São Judas Tadeu">São Judas Tadeu</option>
+                    <option value="São Luiz">São Luiz</option>
+                    <option value="São Pedro">São Pedro</option>
+                    <option value="Vila Ferreira">Vila Ferreira</option>
+                    <option value="Vila Maria">Vila Maria</option>
+                    <option value="Walter Martins Ferreira">Walter Martins Ferreira</option>
+                    <option value="Residencial Capanema">Residencial Capanema</option>
+                    <option value="Residencial Cecília Meireles">Residencial Cecília Meireles</option>
+                    <option value="Residencial Grão Pará">Residencial Grão Pará</option>
+                    <option value="Residencial Jardim Europa">Residencial Jardim Europa</option>
+                    <option value="Residencial Paraíso">Residencial Paraíso</option>
+                    <option value="Residencial Porto Seguro">Residencial Porto Seguro</option>
+                    <option value="Residencial São Luiz">Residencial São Luiz</option>
+                    <option value="Residencial Veredas da Serra">Residencial Veredas da Serra</option>
                 </select>
                 <label>Município:</label>
                 <input type="text" name="municipio" value="Pará de Minas" readonly>
@@ -146,9 +182,17 @@
                     <div class="envolvido-title">ENVOL. 01</div>
                     <div class="info">
                         <label>Condições de Qualificação:</label>
-                        <input type="text" name="condicoes_qualificacao">
+                        <select name="condicoes_qualificacao">
+                            <option value="suspeito">Suspeito</option>
+                            <option value="vitima">Vítima</option>
+                            <option value="testemunha">Testemunha</option>
+                            <option value="outros">Outros</option>
+                        </select>
                         <label>Condições Físicas:</label>
-                        <input type="text" name="condicoes_fisicas">
+                        <select name="condicoes_fisicas">
+                            <option value="ferimento">Ferimento</option>
+                            <option value="sem_ferimento">Sem Ferimento</option>
+                        </select>
                         <label>Nome:</label>
                         <input type="text" name="nome">
                         <label>Apelido:</label>
@@ -156,8 +200,10 @@
                         <label>Data Nasci:</label>
                         <input type="date" name="data_nascimento">
                         <label>Sexo:</label>
-                        <input type="radio" name="sexo" value="M"> Masculino
-                        <input type="radio" name="sexo" value="F"> Feminino
+                        <select name="sexo">
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
                         <label>Nome da Mãe:</label>
                         <input type="text" name="nome_mae">
                         <label>Nome do Pai:</label>
@@ -174,8 +220,6 @@
                         <input type="text" name="documento_numero">
                         <label>Órgão Emissor:</label>
                         <input type="text" name="orgao_emissor">
-                        <
-<input type="text" name="orgao_emissor">
                         <label>Endereço:</label>
                         <input type="text" name="endereco">
                         <label>Bairro:</label>
@@ -235,9 +279,17 @@
                     <div class="envolvido-title">ENVOL. ${envolvidoCount}</div>
                     <div class="info">
                         <label>Condições de Qualificação:</label>
-                        <input type="text" name="condicoes_qualificacao_${envolvidoCount}">
+                        <select name="condicoes_qualificacao_${envolvidoCount}">
+                            <option value="suspeito">Suspeito</option>
+                            <option value="vitima">Vítima</option>
+                            <option value="testemunha">Testemunha</option>
+                            <option value="outros">Outros</option>
+                        </select>
                         <label>Condições Físicas:</label>
-                        <input type="text" name="condicoes_fisicas_${envolvidoCount}">
+                        <select name="condicoes_fisicas_${envolvidoCount}">
+                            <option value="ferimento">Ferimento</option>
+                            <option value="sem_ferimento">Sem Ferimento</option>
+                        </select>
                         <label>Nome:</label>
                         <input type="text" name="nome_${envolvidoCount}">
                         <label>Apelido:</label>
@@ -245,8 +297,10 @@
                         <label>Data Nasci:</label>
                         <input type="date" name="data_nascimento_${envolvidoCount}">
                         <label>Sexo:</label>
-                        <input type="radio" name="sexo_${envolvidoCount}" value="M"> Masculino
-                        <input type="radio" name="sexo_${envolvidoCount}" value="F"> Feminino
+                        <select name="sexo_${envolvidoCount}">
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
                         <label>Nome da Mãe:</label>
                         <input type="text" name="nome_mae_${envolvidoCount}">
                         <label>Nome do Pai:</label>
@@ -275,7 +329,3 @@
                 </div>
             `;
             envolvidoContainer.appendChild(envolvidoDiv);
-        }
-    </script>
-</body>
-</html>
