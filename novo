@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarda Civil Municipal de Pará de Minas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #1E2C4E; /* Azul marinho */
+            color: #FFFFFF; /* Branco */
+        }
+        h1, h2 {
+            background-color: #0B162B; /* Azul mais escuro */
+            color: #FFFFFF; /* Branco */
+            padding: 10px;
+            border-bottom: 2px solid #FFFFFF; /* Branco */
+            text-align: center;
+        }
+        .section {
+            background-color: #233D6C; /* Azul médio */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .info {
+            margin-left: 20px;
+        }
+        .envolvido {
+            margin-top: 10px;
+        }
+        .envolvido-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="time"], input[type="radio"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #CCCCCC; /* Cinza */
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-add {
+            background-color: #0B162B; /* Azul mais escuro */
+            color: #FFFFFF; /* Branco */
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .btn-add:hover {
+            background-color: #233D6C; /* Azul médio */
+        }
+        input[type="submit"] {
+            background-color: #0B162B; /* Azul mais escuro */
+            color: #FFFFFF; /* Branco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #233D6C; /* Azul médio */
+        }
+    </style>
+</head>
+<body>
+    <h1>PREFEITURA MUNICIPAL DE PARÁ DE MINAS</h1>
+    <h2>ASSESSORIA MUNICIPAL DE DEFESA SOCIAL E GUARDA CIVIL MUNICIPAL</h2>
+    <form action="#" method="post" id="boletimForm">
+        <div class="section">
+            <div class="info">
+                <label>Boletim de Ocorrência Simplificado nº:</label>
+                <input type="text" name="boletim_numero">
+                <label>Destinatário:</label>
+                <input type="text" name="destinatario" value="Ao Senhor Comandante da Guarda Civil Municipal" readonly>
+                <label>Descrição Sintética:</label>
+                <select name="descricao_sintetica">
+                    <option value="Y15.030">Patrulhamento Preventivo (Y15.030): Ação/Operação em área urbana.</option>
+                    <option value="T00.000">Fiscalização de Trânsito GCM (T00.000): Infrações referentes ao trânsito.</option>
+                    <option value="Y15.001">Patrulhamento Escolar (Y15.001): Patrulha Escolar.</option>
+                    <option value="X02.000">Fiscalização GCM (X02.000): Coordenação, Controle Operacional e Administrativo.</option>
+                    <option value="A05.000">Abordagem a Suspeito (A05.000): Abordagem a pessoa ou veículo em atitude suspeita.</option>
+                    <option value="A05.001">Averiguação de Pessoas/Veículos (A05.001): Abordagem de suspeitos de tráfico de drogas e crimes violentos.</option>
+                    <option value="Y30.007">Apoio a Órgãos Municipais (Y30.007): Apoio a órgãos municipais.</option>
+                    <option value="X03.000">Apoio a Transeunte: Empenho administrativo (X03.000).</option>
+                    <option value="A10.000">Localização de Pessoa Desaparecida (A10.000): Pessoa localizada.</option>
+                    <option value="A17.001">Localização de Cadáver (A17.001): Localização de corpo. Acionar CBMMG e PC.</option>
+                    <option value="A17.003">Localização de Partes de Corpo (A17.003): Encontro de partes de corpo. Acionar CBMMG.</option>
+                    <option value="A17.005">Remoção de Cadáver (A17.005): Remoção feita pelo Rabecão da Polícia Civil.</option>
+                    <option value="A30.100">Encaminhamento de Animais ao Órgão Competente (A30.100): Recolhimento de animais abandonados.</option>
+                    <option value="A31.201">Recolhimento de Animal Doméstico (A31.201): Recolhimento de animal doméstico ferido ou causando risco.</option>
+                    <option value="A31.202">Recolhimento de Animais Exóticos (A31.202): Recolhimento de animais exóticos abandonados ou afastados do seu bioma. Acionar CBMMG.</option>
+                </select>
+            </div>
+        </div>
+
+        <h2>I – DADOS REFERENTES AO LOCAL DE OCORRÊNCIA</h2>
+        <div class="section">
+            <div class="info">
+                <label>Data:</label>
+                <input type="date" name="data">
+                <label>Hora Inicial:</label>
+                <input type="time" name="hora_inicial">
+                <label>Hora Final:</label>
+                <input type="time" name="hora_final">
+                <label>Logradouro:</label>
+                <input type="text" name="logradouro">
+                <label>Nº:</label>
+                <input type="text" name="numero">
+                <label>Complemento:</label>
+                <input type="text" name="complemento">
+                <label>Bairros:</label>
+                <select name="bairros">
+                    <option value="Área Rural de Pará de Minas">Área Rural de Pará de Minas</option>
+                    <option value="Ascenção">Ascenção</option>
+                    <option value="Azambeque">Azambeque</option>
+                    <option value="Bela Vista">Bela Vista</option>
+                    <option value="Belvedere">Belvedere</option>
+                    <option value="Bom Jesus do Pará">Bom Jesus do Pará</option>
+                    <option value="Califórnia">Califórnia</option>
+                    <option value="Carioca">Carioca</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Chácaras Dom Bosco">Chácaras Dom Bosco</option>
+                    <option value="Conjunto Habitacional São Vicente de Paulo">Conjunto Habitacional São Vicente de Paulo</option>
+                    <option value="Coração de Jesus">Coração de Jesus</option>
+                    <option value="Cores de Minas">Cores de Minas</option>
+                    <option value="Córrego do Barro">Córrego do Barro</option>
+                    <option value="Distrito Industrial Antônio Júlio de Faria">Distrito Industrial Antônio Júlio de Faria</option>
+                    <option value="Distrito Industrial Fernando Antônio Almeida">Distrito Industrial Fernando Antônio Almeida</option>
+                    <option value="Dom Bosco">Dom Bosco</option>
+                    <option value="Dos Ipês">Dos Ipês</option>
+                    <option value="Eldorado">Eldorado</option>
+                    <option value="Esplanada">Esplanada</option>
+                    <option value="Gorduras">Gorduras</option>
+                    <option value="Grão Pará">Grão Pará</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                    <option value="Jardim Beatriz">Jardim Beatriz</option>
+                    <option value="Jardim Castelo Branco">Jardim Castelo Branco</option>
+                    <option value="Jardim das Oliveiras">Jardim das Oliveiras</option>
+                    <option value="Jardim Primavera">Jardim Primavera</option>
+                    <option value="José Cirilo">José Cirilo</option>
+                    <option value="Lagoa Seca">Lagoa Seca</option>
+                    <option value="Niterói">Niterói</option>
+                    <option value="Novo Horizonte">Novo Horizonte</option>
+                    <option value="Patafufo">Patafufo</option>
+                    <option value="Ponte do Mateus">Ponte do Mateus</option>
+                    <option value="Querosene">Querosene</option>
+                    <option value="Ravena">Ravena</option>
+                    <option value="Recanto da Lagoa">Recanto da Lagoa</option>
+                    <option value="São Francisco de Paula">São Francisco de Paula</option>
+                    <option value="São José do Paraopeba">São José do Paraopeba</option>
+                    <option value="São Luiz">São Luiz</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="São Pedro do Indaia">São Pedro do Indaia</option>
+                    <option value="São Vicente">São Vicente</option>
+                    <option value="Serra Verde">Serra Verde</option>
+                    <option value="Várzea da Onça">Várzea da Onça</option>
+                    <option value="Vila Ferreira">Vila Ferreira</option>
+                    <option value="Vila Maria">Vila Maria</option>
+                    <option value="Vila Raquel">Vila Raquel</option>
+                    <option value="Vila Sinhô">Vila Sinhô</option>
+                </select>
+                <label>Origem do chamado:</label>
+                <select name="origem_chamado">
+                    <option value="Extramuros">Extramuros</option>
+                    <option value="Intramuros">Intramuros</option>
+                    <option value="Vista a Nula">Vista a Nula</option>
+                </select>
+            </div>
+        </div>
+
+        <h2>II – DADOS REFERENTES AOS ENVOVIDOS E CONDUZIDOS</h2>
+        <div class="section">
+            <div class="info">
+                <label>Nome:</label>
+                <input type="text" name="nome">
+                <label>Sexo:</label>
+                <input type="radio" name="sexo" value="Masculino"> Masculino
+                <input type="radio" name="sexo" value="Feminino"> Feminino
+                <input type="radio" name="sexo" value="Outro"> Outro
+                <label>Endereço:</label>
+                <input type="text" name="endereco">
+                <label>Nº:</label>
+                <input type="text" name="numero_envolvido">
+                <label>Complemento:</label>
+                <input type="text" name="complemento_envolvido">
+                <label>Bairro:</label>
+                <select name="bairro_envolvido">
+                    <option value="Área Rural de Pará de Minas">Área Rural de Pará de Minas</option>
+                    <option value="Ascenção">Ascenção</option>
+                    <option value="Azambeque">Azambeque</option>
+                    <option value="Bela Vista">Bela Vista</option>
+                    <option value="Belvedere">Belvedere</option>
+                    <option value="Bom Jesus do Pará">Bom Jesus do Pará</option>
+                    <option value="Califórnia">Califórnia</option>
+                    <option value="Carioca">Carioca</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Chácaras Dom Bosco">Chácaras Dom Bosco</option>
+                    <option value="Conjunto Habitacional São Vicente de Paulo">Conjunto Habitacional São Vicente de Paulo</option>
+                    <option value="Coração de Jesus">Coração de Jesus</option>
+                    <option value="Cores de Minas">Cores de Minas</option>
+                    <option value="Córrego do Barro">Córrego do Barro</option>
+                    <option value="Distrito Industrial Antônio Júlio de Faria">Distrito Industrial Antônio Júlio de Faria</option>
+                    <option value="Distrito Industrial Fernando Antônio Almeida">Distrito Industrial Fernando Antônio Almeida</option>
+                    <option value="Dom Bosco">Dom Bosco</option>
+                    <option value="Dos Ipês">Dos Ipês</option>
+                    <option value="Eldorado">Eldorado</option>
+                    <option value="Esplanada">Esplanada</option>
+                    <option value="Gorduras">Gorduras</option>
+                    <option value="Grão Pará">Grão Pará</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                    <option value="Jardim Beatriz">Jardim Beatriz</option>
+                    <option value="Jardim Castelo Branco">Jardim Castelo Branco</option>
+                    <option value="Jardim das Oliveiras">Jardim das Oliveiras</option>
+                    <option value="Jardim Primavera">Jardim Primavera</option>
+                    <option value="José Cirilo">José Cirilo</option>
+                    <option value="Lagoa Seca">Lagoa Seca</option>
+                    <option value="Niterói">Niterói</option>
+                    <option value="Novo Horizonte">Novo Horizonte</option>
+                    <option value="Patafufo">Patafufo</option>
+                    <option value="Ponte do Mateus">Ponte do Mateus</option>
+                    <option value="Querosene">Querosene</option>
+                    <option value="Ravena">Ravena</option>
+                    <option value="Recanto da Lagoa">Recanto da Lagoa</option>
+                    <option value="São Francisco de Paula">São Francisco de Paula</option>
+                    <option value="São José do Paraopeba">São José do Paraopeba</option>
+                    <option value="São Luiz">São Luiz</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="São Pedro do Indaia">São Pedro do Indaia</option>
+                    <option value="São Vicente">São Vicente</option>
+                    <option value="Serra Verde">Serra Verde</option>
+                    <option value="Várzea da Onça">Várzea da Onça</option>
+                    <option value="Vila Ferreira">Vila Ferreira</option>
+                    <option value="Vila Maria">Vila Maria</option>
+                    <option value="Vila Raquel">Vila Raquel</option>
+                    <option value="Vila Sinhô">Vila Sinhô</option>
+                </select>
+                <label>Situação:</label>
+                <input type="text" name="situacao">
+                <label>Nº Boletim:</label>
+                <input type="text" name="boletim_n">
+                <label>Origem:</label>
+                <input type="text" name="origem">
+                <label>Nº Folha:</label>
+                <input type="text" name="folha">
+                <label>Relatório:</label>
+                <textarea name="relatorio" rows="5"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="Gerar DOCX">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.20.0/docxtemplater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script>
+        document.getElementById('boletimForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(this);
+
+            // Converter FormData para objeto simples
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+
+            // Carregar o modelo do documento DOCX (template)
+            const url = 'URL_DO_SEU_TEMPLATE.docx'; // Substitua pela URL do seu modelo DOCX
+            fetch(url)
+                .then(response => response.arrayBuffer())
+                .then(template => {
+                    const zip = new JSZip(template);
+                    const doc = new Docxtemplater().loadZip(zip);
+                    
+                    // Definir dados para preencher o template
+                    doc.setData(data);
+
+                    try {
+                        // Gerar documento DOCX preenchido
+                        doc.render();
+                        const output = doc.getZip().generate({
+                            type: 'blob',
+                            mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                        });
+
+                        // Fazer download do documento gerado
+                        const filename = `Boletim-${data.boletim_numero}.docx`;
+                        saveAs(output, filename);
+                    } catch (error) {
+                        console.error('Erro ao gerar o documento DOCX:', error);
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar o template DOCX:', error));
+        });
+    </script>
+</body>
+</html>
